@@ -144,6 +144,7 @@ add_include_dir(bzip2 "${CMAKE_CURRENT_LIST_DIR}/third_party_libs/bzip2")
 add_include_dir(exprtk "${CMAKE_CURRENT_LIST_DIR}/third_party_libs/exprtk")
 
 if(WGUI_INCLUDE_DEPENDENCIES)
+    set(CMAKE_DISABLE_FIND_PACKAGE_HarfBuzz TRUE CACHE STRING "" FORCE)
 	# Freetype
 	register_third_party_library(freetype)
 	set_target_properties(freetype PROPERTIES FOLDER third_party_libs)
